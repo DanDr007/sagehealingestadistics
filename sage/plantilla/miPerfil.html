@@ -1,0 +1,140 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sage Healing</title>
+    <!-- xicon -->
+    <link rel="shortcut icon" href="{% static 'img/head_heart.png' %}" type="image/x-icon">
+    <!-- googlefont -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;800&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="{% static 'css/generalStyle.css' %}">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/3fecc3b1d9.js" crossorigin="anonymous"></script>
+</head>
+
+
+
+<body>
+
+
+    <!-- header -->
+    <header>
+        <nav>
+            <a href="https://sagehealing.herokuapp.com/sageHealing.jsp">Sage Healing</a>
+            <ul>
+                <li><a href="" class="nav_link-active">Mi perfil</a></li>
+                <li><a href="https://sagehealing.herokuapp.com/misDietas.jsp" class="">Mis dietas</a></li>
+                <li><a href="https://sagehealing.herokuapp.com/pruebasQuest.jsp" class="">Pruebas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr color="#e1e1e1">
+
+
+    <!-- sectionD -->
+    <section class="sectionD">
+        <div class="sectionD_contentLeft">
+            <h2>Hola!!</h2>
+            <div class="sectionD_data">
+                <div>
+                    <p>Nombre:</p>
+                    <p>Edad:</p>
+                    <br>
+                    <p>Altura:</p>
+                    <p>Peso:</p>
+                    <br>
+                    <p>Correo:</p>
+                </div>
+                <div>
+                    <p>{{nombre}}</p>
+                    <p>{{edad}}</p>
+                    <br>
+                    <p>{{altura}}</p>
+                    <p>{{peso}}</p>
+                    <br>
+                    <p>{{correo}}</p>
+                </div>
+            </div>
+            <a href="https://sagehealing.herokuapp.com/modificarPerfil.jsp">Modificar datos</a>
+        </div>
+        <div class="sectionD_contentRigth">
+            <div class="sectionD_contentRigth-block">
+                <h2>IMC</h2>
+                <img src="{% static 'img/content_heartPulsations.png'%}" alt="content_heartPulsations">
+                <h4>{{imcM}}</h4>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- sectionB -->
+    <section  class="sectionB">
+        <div class="sectionB_title">
+            <h4>Estadisticas</h4>
+        </div>
+        <div class="sectionB_content">
+            <div>
+                <div class="sectionB_content-img">
+                    <img src="{% static 'img/content_heartBroken.png'%}" alt="content_heartBroken">
+                </div>
+                <h6>{{porcentaje1}} %</h6>
+                <p>Probabilidad de tener: <span>{{enf1}}</span></p>
+            </div>
+            <div>
+                <div class="sectionB_content-img">
+                    <img src="{% static 'img/content_heartBroken.png'%}" alt="content_heartBroken">
+                </div>
+                <h6>{{porcentaje2}} %</h6>
+                <p>Probabilidad de tener: <span>{{enf2}}</span></p>
+            </div>
+            <div>
+                <div class="sectionB_content-img">
+                    <img src="{% static 'img/content_heartBroken.png'%}" alt="content_heartBroken">
+                </div>
+                <h6>{{porcentaje3}} %</h6>
+                <p>Probabilidad de tener: <span>{{enf3}}</span></p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- sectionF -->
+    <section class="sectionF">
+        <h4>Proyecciones</h4>
+        <p>Aqui tienes una proyeccion estimada de lo que ocurrira si sigues teniendo malos habitos alimenticios.</p>
+        <div class="sectionF_content">
+            <div class="sectionF_content-estadistics">
+                <p>{{mens}}</p>
+            </div>
+            <div class="sectionF_content-begin">
+                <div>
+                    <img src="{% static 'img/content_personFit.png'%}" alt="content_personFit">
+                    <a href="https://sagehealing.herokuapp.com/misDietas.jsp">Comienza a cuidarte</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer_content-logo">
+            <img src="{% static 'img/logo-voorpret.png'%}" alt="logo-voorpret">
+        </div>
+        <div class="footer_content-text">
+            <p>Create by Voorpret</p>
+        </div>
+        <div class="footer_content-social">
+            <a href="https://github.com/Arsenal2801/4IV7_SAGEHEALING" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+
+</body>
+</html>
