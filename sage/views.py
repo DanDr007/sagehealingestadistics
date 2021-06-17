@@ -52,7 +52,7 @@ def home(request,id_usu):
         mens="Usted se enfermara en : "+str("{0:.2f}".format(Y_predictEnf[0][0]))+" dias"
     except:
         mens="Tiene que realizar 5 questionarios como minimo para ver su prediccion"
-    doc_externo=open("sage\plantilla\miPerfil.html")
+    doc_externo=open("plantilla\miPerfil.html")
     plt=Template(doc_externo.read())
     doc_externo.close()
     ctx=Context({"id_usu":id_usu,"nombre":nombre,"edad":edad,"correo":correo,"peso":peso,"altura":altura,"porcentaje1":porcentaje1,"porcentaje2":porcentaje2,"porcentaje3":porcentaje3,"enf1":enf1,"enf2":enf2,"enf3":enf3,"imcM":mensaje,"mens":mens})
