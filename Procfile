@@ -1,1 +1,1 @@
-web: gunicorn sage.wsgi --log-file -
+web: gunicorn deploypy.wsgi --log-file -
