@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn import linear_model
 def home(request,id_usu):
-    miconexion = mysql.connector.connect(user="root",password="root",host="localhost",database="sage")
+    miconexion = mysql.connector.connect(user="b00e281ad2b01d",password="51b1bd74",host="us-cdbr-east-04.cleardb.com",database="heroku_a8c9e3b6160e545?reconnect=true")
     cursor = miconexion.cursor()
     q = "select * from usuarios where id_usu = "+id_usu+""
     cursor.execute(q)
